@@ -7,7 +7,7 @@
 $ git clone https://github.com/jackliusr/cert-manager-webhook-godaddy.git
 $ cd cert-manager-webhook-godaddy
 $ # change image: repository: [your name]/cert-manager-webhook-godaddy in values.yaml at deploy/godaddy-webhook/values.yaml
-$ helm install --name godaddy-webhook --namespace cert-manager ./deploy/godaddy-webhook
+$ helm install godaddy-webhook --namespace cert-manager ./deploy/godaddy-webhook
 ```
 
 ## Issuer
