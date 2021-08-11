@@ -12,6 +12,18 @@ $ helm install godaddy-webhook --namespace cert-manager ./deploy/godaddy-webhook
 
 ## Issuer
 
+### Secret 
+
+```yaml
+apiVersion: v1
+data:
+  api-secret: <AAA>
+kind: Secret
+metadata:
+  name: godaddy-api-secret
+  namespace: cert-manager
+```
+
 ### ClusterIssuer
 
 ```yaml
@@ -33,7 +45,9 @@ spec:
         webhook:
           config:
             authApiKey: <your GoDaddy authAPIKey>
-            authApiSecret: <your GoDaddy authApiSecret>
+            authApiSecretRef: 
+               name: godaddy-api-secret
+               key:  api-secret
             production: true
             ttl: 600
           groupName: acme.mycompany.com
