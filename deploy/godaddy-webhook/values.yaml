@@ -6,10 +6,12 @@ replicaCount: 1
 
 image:
   repository: jackliusr/cert-manager-webhook-godaddy
-  tag: v0.1.1
+  tag: v1.6.0
   pullPolicy: IfNotPresent
 
 groupName: acme.mycompany.com
+
+hostNetwork: false
 
 certManager:
   namespace: cert-manager
