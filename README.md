@@ -6,8 +6,8 @@
 ```bash
 $ git clone https://github.com/jackliusr/cert-manager-webhook-godaddy.git
 $ cd cert-manager-webhook-godaddy
-$ # change image: repository: [your name]/cert-manager-webhook-godaddy in values.yaml at deploy/godaddy-webhook/values.yaml
-$ helm install godaddy-webhook --namespace cert-manager ./deploy/godaddy-webhook
+$ # change image: repository: [your name]/cert-manager-webhook-godaddy in values.yaml at charts/godaddy-webhook/values.yaml
+$ helm install godaddy-webhook --namespace cert-manager ./charts/godaddy-webhook
 ```
 
 ## Issuer
